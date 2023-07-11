@@ -117,11 +117,10 @@ def save():
 # ---------------------------- Search   ------------------------------- #
 def find_password():
     website = website_entry.get()
-    email = email_entry.get()
-    if len(website) == 0 or len(email) == 0:
+    if len(website) == 0:
         messagebox.showinfo(
             title="Error",
-            message="Please enter the Website and Email/Username to search for the corresponding password.",
+            message="Please enter the Website to search for the corresponding password.",
         )
     else:
         try:
@@ -133,7 +132,13 @@ def find_password():
                 message="No Data File found.",
             )
         else:
-            print(data)
+            if website in data:
+                email = data[website]["email"]
+                password = data[website]["password"]
+                messagebox.showinfo(
+                    title=website,
+                    message=f"Website: {website}\nEmail: {email}\nPassword: {password}",
+                )
 
 
 # ---------------------------- UI SETUP ------------------------------- #
