@@ -1,7 +1,7 @@
 # Password_Generator
 password generator project
 
-WARNING***DOES NOT HAVE ENCRYPTION***
+WARNING **DOES NOT HAVE ENCRYPTION**
 
 How to run
 1. put exe and png file in the same folder
