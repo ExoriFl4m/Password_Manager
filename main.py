@@ -139,6 +139,8 @@ def find_password():
                     title=website,
                     message=f"Website: {website}\nEmail: {email}\nPassword: {password}",
                 )
+            else:
+                messagebox.showinfo(title="Error", message=f"There is no data for Website: {website}")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
