@@ -66,7 +66,7 @@ def save():
             password_generated.config(text="")
 
 
-# ---------------------------- Search   ------------------------------- #
+# ---------------------------- Search ------------------------------- #
 def find_password():
     website = website_entry.get()
     if len(website) == 0:
